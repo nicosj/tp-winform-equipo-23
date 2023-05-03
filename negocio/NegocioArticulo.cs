@@ -15,6 +15,7 @@ namespace negocio
             SqlDataReader leer;
             try
             {
+                //conn.ConnectionString = "server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false";
                 conn.ConnectionString = "server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false";
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = "SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS";
