@@ -17,6 +17,7 @@ namespace ConexionDB
         {
             conexion= new SqlConnection ("server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false");
             comando = new SqlCommand();
+            //prue
         }
         public void setearConsulta(string consulta)
         {
