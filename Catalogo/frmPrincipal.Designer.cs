@@ -1,6 +1,6 @@
 ﻿namespace Catalogo
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Location = new System.Drawing.Point(15, 15);
-            this.Name = "Form1";
+            this.Name = "frmPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
