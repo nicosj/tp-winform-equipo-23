@@ -17,10 +17,10 @@ namespace negocio
             {   //CADENA DE CONEXION NICO//
                 //conn.ConnectionString = "server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false";
                 //CADENA DE CONEXION SEBA//
-                //conn.ConnectionString = "server=localhost\\LABO3; database=CATALOGO_P3_DB; integrated security=false; user=sa; password=123xx;";
-				//CADENA DE CONEXION ERIK//
-				conn.ConnectionString = "server=localhost\\LAB3SV; database=CATALOGO_P3_DB; integrated security=false; user=sa; password=0856;";
-				command.CommandType = System.Data.CommandType.Text;
+                conn.ConnectionString = "server=localhost\\LABO3; database=CATALOGO_P3_DB; integrated security=false; user=sa; password=123xx;";
+                //cadena de conexion erik//
+                //conn.connectionstring = "server=localhost\\lab3sv; database=catalogo_p3_db; integrated security=false; user=sa; password=0856;";
+                command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = "SELECT Id, Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio FROM ARTICULOS";
                 command.Connection = conn;
                 conn.Open();
