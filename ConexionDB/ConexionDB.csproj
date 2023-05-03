@@ -4,11 +4,11 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{95EF3666-5804-4E25-A3EF-1D9D7CFD6E2C}</ProjectGuid>
+        <ProjectGuid>{559432B2-C9DC-4CEC-9090-CF75629D3342}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>negocio</RootNamespace>
-        <AssemblyName>negocio</AssemblyName>
+        <RootNamespace>ConexionDB</RootNamespace>
+        <AssemblyName>ConexionDB</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
     </PropertyGroup>
@@ -38,18 +38,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="NegocioArticulo.cs" />
+        <Compile Include="DB.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
-        <Project>{559432b2-c9dc-4cec-9090-cf75629d3342}</Project>
-        <Name>ConexionDB</Name>
-      </ProjectReference>
-      <ProjectReference Include="..\Dominio\Dominio.csproj">
-        <Project>{1f43406c-6658-47a7-aa73-4cc5dab6c5fe}</Project>
-        <Name>Dominio</Name>
-      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
