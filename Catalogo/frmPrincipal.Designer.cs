@@ -29,8 +29,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btAgregar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,23 +42,37 @@
             this.dataGridView1.Size = new System.Drawing.Size(716, 208);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Form1
+            // btAgregar
+            // 
+            this.btAgregar.Location = new System.Drawing.Point(12, 415);
+            this.btAgregar.Name = "btAgregar";
+            this.btAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btAgregar.TabIndex = 1;
+            this.btAgregar.Text = "Agregar";
+            this.btAgregar.UseVisualStyleBackColor = true;
+            this.btAgregar.Click += new System.EventHandler(this.btAgregar_Click);
+            // 
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btAgregar);
             this.Controls.Add(this.dataGridView1);
             this.Location = new System.Drawing.Point(15, 15);
             this.Name = "frmPrincipal";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.DataGridView dataGridView1;
 
 
         #endregion
+
+        private System.Windows.Forms.Button btAgregar;
     }
 }

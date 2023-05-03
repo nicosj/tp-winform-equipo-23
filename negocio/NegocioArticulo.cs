@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using ConexionDB;
 using Dominio;
+using negocio;
 
 namespace negocio
 {

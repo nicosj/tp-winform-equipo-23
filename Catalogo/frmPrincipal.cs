@@ -27,5 +27,10 @@ namespace Catalogo
             dataGridView1.DataSource = negocio.listar();
         }
 
+        private void btAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregarArt alta = new frmAgregarArt();
+            alta.ShowDialog();
+        }
     }
 }
