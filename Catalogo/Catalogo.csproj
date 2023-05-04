@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAgregarArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarArt.Designer.cs">
+      <DependentUpon>frmAgregarArt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAgregarArt.resx">
+      <DependentUpon>frmAgregarArt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +93,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
+      <Project>{559432b2-c9dc-4cec-9090-cf75629d3342}</Project>
+      <Name>ConexionDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Dominio\Dominio.csproj">
       <Project>{1f43406c-6658-47a7-aa73-4cc5dab6c5fe}</Project>
       <Name>Dominio</Name>

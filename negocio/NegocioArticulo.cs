@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using ConexionDB;
 using Dominio;
+using negocio;
 
 namespace negocio
 {
