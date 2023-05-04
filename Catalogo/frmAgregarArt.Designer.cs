@@ -232,7 +232,7 @@
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarArt";
-            
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAgregarArt_FormClosed);
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

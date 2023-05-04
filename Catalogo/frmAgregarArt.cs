@@ -24,6 +24,7 @@ namespace Catalogo
         {
             Close();
         }
+      
 
         private void btAgregarArt_Click(object sender, EventArgs e)
         {
@@ -44,7 +45,7 @@ namespace Catalogo
                 /*dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('"+articulo.Codigo+"','"+articulo.Nombre+"','"+articulo.Descripcion+"',"+articulo.IdMarca+","+articulo.IdCategoria+","+articulo.Precio+")");
                 dB.ejecutarLectura();*/
                 NegocioArticulo negocioArticulo = new NegocioArticulo();
-                
+                //realiza la consulta en la logica de negocio y retorna el bool si fue exitoso
                 if(negocioArticulo.guardar(articulo))
                 {
                     MessageBox.Show("Articulo agregado con exito");
@@ -68,6 +69,8 @@ namespace Catalogo
 
         private void frmAgregarArt_Load(object sender, EventArgs e)
         {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Hide();
             NegocioMarca negocioMarca = new NegocioMarca();
             NegocioCategoria negocioCategoria = new NegocioCategoria();
             try
@@ -84,6 +87,13 @@ namespace Catalogo
             }
         }
 
-        
+
+        private void frmAgregarArt_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Refresh();
+            
+            
+        }
     }
 }

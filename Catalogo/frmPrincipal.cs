@@ -31,6 +31,8 @@ namespace Catalogo
         {
             frmAgregarArt alta = new frmAgregarArt();
             alta.ShowDialog();
+            //Refresh datagridview
+            Form1_Load(sender, e);
             
 
         }
