@@ -38,7 +38,7 @@ namespace Catalogo
 						Close();
 				}
 
-				private void btAgregarArt_Click(object sender, EventArgs e)
+				private void btAceptarArt_Click(object sender, EventArgs e)
 				{
 						//Articulo articulo = new Articulo();
 						DB dB = new DB();

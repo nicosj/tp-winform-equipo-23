@@ -210,7 +210,7 @@
 						this.btAceptar.TabIndex = 17;
 						this.btAceptar.Text = "Aceptar";
 						this.btAceptar.UseVisualStyleBackColor = true;
-						this.btAceptar.Click += new System.EventHandler(this.btAgregarArt_Click);
+						this.btAceptar.Click += new System.EventHandler(this.btAceptarArt_Click);
 						// 
 						// btCancelar
 						// 
