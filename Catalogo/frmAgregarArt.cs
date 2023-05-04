@@ -28,7 +28,7 @@ namespace Catalogo
         private void btAgregarArt_Click(object sender, EventArgs e)
         {
             Articulo articulo = new Articulo();
-            DB dB = new DB();
+            
             try
             {
                 articulo.Codigo = txtAgrCodigo.Text;
@@ -39,10 +39,22 @@ namespace Catalogo
                 //Imagen aux = new Imagen();
                 //aux.ImagenUrl = (string)lector["UrlImagen"];
                 articulo.Precio= decimal.Parse(txtAgrPrecio.Text);
-
-                dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('"+articulo.Codigo+"','"+articulo.Nombre+"','"+articulo.Descripcion+"',"+articulo.IdMarca+","+articulo.IdCategoria+","+articulo.Precio+")");
-                dB.ejecutarLectura();
-                MessageBox.Show("Articulo agregado con exito");
+                
+                ///desacomplar
+                /*dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('"+articulo.Codigo+"','"+articulo.Nombre+"','"+articulo.Descripcion+"',"+articulo.IdMarca+","+articulo.IdCategoria+","+articulo.Precio+")");
+                dB.ejecutarLectura();*/
+                NegocioArticulo negocioArticulo = new NegocioArticulo();
+                
+                if(negocioArticulo.guardar(articulo))
+                {
+                    MessageBox.Show("Articulo agregado con exito");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar articulo");
+                }
+                
 
                 
 
@@ -71,5 +83,7 @@ namespace Catalogo
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        
     }
 }

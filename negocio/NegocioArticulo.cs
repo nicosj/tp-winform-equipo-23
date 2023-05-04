@@ -8,6 +8,26 @@ namespace negocio
 {
     public class NegocioArticulo
     {
+        public bool guardar(Articulo nuevo)
+        {
+            DB db = new DB();
+            try
+            {
+                db.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                db.comando.Parameters.Clear();
+                db.comando.Parameters.AddWithValue("@Codigo", nuevo.Codigo);
+                db.comando.Parameters.AddWithValue("@Nombre", nuevo.Nombre);
+                db.comando.Parameters.AddWithValue("@Descripcion", nuevo.Descripcion);
+                db.comando.Parameters.AddWithValue("@IdMarca", nuevo.IdMarca);
+                db.comando.Parameters.AddWithValue("@IdCategoria", nuevo.IdCategoria);
+                db.comando.Parameters.AddWithValue("@Precio", nuevo.Precio);
+                return db.ejecutarAccion();
+            }
+            catch (System.Exception ex)
+            {
+                throw ex;
+            }
+        }
         public List<Articulo> listar( )
         {
             List<Articulo> articulos = new List<Articulo>();

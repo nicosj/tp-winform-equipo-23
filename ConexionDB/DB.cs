@@ -7,7 +7,7 @@ namespace ConexionDB
     public class DB
     {
         private SqlConnection conexion;
-        private SqlCommand comando;
+        public SqlCommand comando;
         private SqlDataReader lector;
         public SqlDataReader Lector
         {
@@ -39,18 +39,22 @@ namespace ConexionDB
             }
         }
 
-        public void ejecutarAccion()
+        public bool ejecutarAccion()
         {
             comando.Connection = conexion;
             try
             {
                 conexion.Open();
                 comando.ExecuteNonQuery();
+                return true;
+                
             }
             catch (Exception ex)
             {
                 throw ex;
+                
             }
+            
         }
 
         public void setearParametro(string nombre, object valor)

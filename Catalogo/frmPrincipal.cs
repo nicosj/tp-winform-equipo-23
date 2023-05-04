@@ -31,6 +31,10 @@ namespace Catalogo
         {
             frmAgregarArt alta = new frmAgregarArt();
             alta.ShowDialog();
+            
+
         }
+
+      
     }
 }

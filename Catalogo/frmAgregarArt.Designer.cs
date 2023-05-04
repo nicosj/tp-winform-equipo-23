@@ -112,8 +112,7 @@
             // 
             // txtAgrCodigo
             // 
-            this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrCodigo.Location = new System.Drawing.Point(92, 56);
             this.txtAgrCodigo.Name = "txtAgrCodigo";
             this.txtAgrCodigo.Size = new System.Drawing.Size(85, 20);
@@ -121,8 +120,7 @@
             // 
             // txtAgrNombre
             // 
-            this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrNombre.Location = new System.Drawing.Point(92, 89);
             this.txtAgrNombre.Name = "txtAgrNombre";
             this.txtAgrNombre.Size = new System.Drawing.Size(150, 20);
@@ -130,8 +128,7 @@
             // 
             // txtAgrDescripcion
             // 
-            this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrDescripcion.Location = new System.Drawing.Point(92, 130);
             this.txtAgrDescripcion.Name = "txtAgrDescripcion";
             this.txtAgrDescripcion.Size = new System.Drawing.Size(181, 20);
@@ -139,8 +136,7 @@
             // 
             // txtAgrImagen
             // 
-            this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrImagen.Location = new System.Drawing.Point(92, 251);
             this.txtAgrImagen.Name = "txtAgrImagen";
             this.txtAgrImagen.Size = new System.Drawing.Size(181, 20);
@@ -148,8 +144,7 @@
             // 
             // txtAgrPrecio
             // 
-            this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrPrecio.Location = new System.Drawing.Point(92, 288);
             this.txtAgrPrecio.Name = "txtAgrPrecio";
             this.txtAgrPrecio.Size = new System.Drawing.Size(100, 20);
@@ -167,8 +162,7 @@
             // 
             // cbxAgrMarca
             // 
-            this.cbxAgrMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAgrMarca.FormattingEnabled = true;
             this.cbxAgrMarca.Location = new System.Drawing.Point(92, 171);
             this.cbxAgrMarca.Name = "cbxAgrMarca";
@@ -177,8 +171,7 @@
             // 
             // cbxAgrCategoria
             // 
-            this.cbxAgrCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAgrCategoria.FormattingEnabled = true;
             this.cbxAgrCategoria.Location = new System.Drawing.Point(92, 210);
             this.cbxAgrCategoria.Name = "cbxAgrCategoria";
@@ -239,10 +232,10 @@
             this.Name = "frmAgregarArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAgregarArt";
+            
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
