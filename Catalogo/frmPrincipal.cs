@@ -28,10 +28,27 @@ namespace Catalogo
 		private void cargar()
 		{
 			NegocioArticulo negocio = new NegocioArticulo();
-			dataGridView1.DataSource = negocio.listar();
+			dgvArticulos.DataSource = negocio.listar();
+			
 		}
 
-		private void btAgregar_Click(object sender, EventArgs e)
+
+        //private void cargarImagen(string imagen)
+        //{
+        //    try
+        //    {
+        //        pbxArticulo.Load(imagen);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        pbxArticulo.Load("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BLZJHTB27ZHUPKK3A7GXTMIEQA.jpg");
+        //    }
+        //}
+
+
+
+
+            private void btAgregar_Click(object sender, EventArgs e)
 		{
 			frmAgregarArt alta = new frmAgregarArt();
 			alta.ShowDialog();
@@ -42,7 +59,7 @@ namespace Catalogo
 		private void btnModificar_Click(object sender, EventArgs e)
 		{
 			Articulo seleccionado;
-			seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+			seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 			frmAgregarArt modificar = new frmAgregarArt(seleccionado);
 			modificar.ShowDialog();
 			cargar();
@@ -63,7 +80,7 @@ namespace Catalogo
 				DialogResult respuesta = MessageBox.Show("Seguro que desea eliminar el Articulo?", "Esta acción es irreversible", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 				if (respuesta == DialogResult.Yes)
 				{
-					seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+					seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
 					negocio.eliminar(seleccionado.Id);
 					cargar();
 				}
@@ -75,5 +92,6 @@ namespace Catalogo
 			}
 		}
 
-	}
+       
+    }
 }
