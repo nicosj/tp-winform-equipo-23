@@ -57,10 +57,13 @@ namespace Catalogo
         private void frmAgregarArt_Load(object sender, EventArgs e)
         {
             NegocioMarca negocioMarca = new NegocioMarca();
+            NegocioCategoria negocioCategoria = new NegocioCategoria();
             try
             {
                 cbxAgrMarca.DataSource = negocioMarca.listar();
                 cbxAgrMarca.ValueMember = "Id";
+                cbxAgrCategoria.DataSource = negocioCategoria.listar();
+                cbxAgrCategoria.ValueMember = "Id";
             }
             catch (Exception ex)
             {

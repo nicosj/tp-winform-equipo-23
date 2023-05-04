@@ -8,7 +8,7 @@ namespace Dominio
          * [Id] [int] IDENTITY(1,1) NOT NULL,
 	[Descripcion] [varchar](50) NULL,
          */
-        public int id { get; set; }
-        public String descripcion { get; set; }
+        public int Id { get; set; }
+        public String Descripcion { get; set; }
     }
 }
