@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Dominio;
 using negocio;
 
 
@@ -19,18 +19,33 @@ namespace Catalogo
         {
             InitializeComponent();
         }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            NegocioArticulo negocio = new NegocioArticulo();
-            dataGridView1.DataSource = negocio.listar();
+        cargar();
         }
+      //FUNCION PARA RELODEAR EL FORMULARIO PRINCIPAL//
+        private void cargar()
+        {
+												NegocioArticulo negocio = new NegocioArticulo();
+												dataGridView1.DataSource = negocio.listar();
+								}
 
         private void btAgregar_Click(object sender, EventArgs e)
         {
             frmAgregarArt alta = new frmAgregarArt();
             alta.ShowDialog();
+            cargar();
+        
         }
-    }
+
+				private void btnModificar_Click(object sender, EventArgs e)
+				{
+      Articulo seleccionado;
+      seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
+      frmAgregarArt modificar = new frmAgregarArt(seleccionado);
+      modificar.ShowDialog();
+      cargar();
+
+				}
+		}
 }
