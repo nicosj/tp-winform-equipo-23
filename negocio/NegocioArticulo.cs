@@ -8,7 +8,7 @@ namespace negocio
 {
     public class NegocioArticulo
     {
-        public List<Articulo> listar(char a, string buscar )
+        public List<Articulo> listar( )
         {
             List<Articulo> articulos = new List<Articulo>();
             DB db = new DB();
