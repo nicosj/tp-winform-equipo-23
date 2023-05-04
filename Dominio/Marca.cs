@@ -4,7 +4,14 @@ namespace Dominio
 {
     public class Marca
     {
-        public int id { get; set; }
-        public String descripcion { get; set; }
+        public int Id { get; set; }
+        public String Descripcion { get; set; }
+
+        //public override string ToString()
+        //{
+        //    return Descripcion;
+        //}
+
+
     }
 }
