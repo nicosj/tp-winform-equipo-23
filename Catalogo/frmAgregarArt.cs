@@ -45,10 +45,12 @@ namespace Catalogo
                 /*dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('"+articulo.Codigo+"','"+articulo.Nombre+"','"+articulo.Descripcion+"',"+articulo.IdMarca+","+articulo.IdCategoria+","+articulo.Precio+")");
                 dB.ejecutarLectura();*/
                 NegocioArticulo negocioArticulo = new NegocioArticulo();
+               
                 //realiza la consulta en la logica de negocio y retorna el bool si fue exitoso
                 if(negocioArticulo.guardar(articulo))
                 {
                     MessageBox.Show("Articulo agregado con exito");
+                    //prue
                     
                 }
                 else

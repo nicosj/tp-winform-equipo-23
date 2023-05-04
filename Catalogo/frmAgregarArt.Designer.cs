@@ -45,6 +45,8 @@
             this.cbxAgrCategoria = new System.Windows.Forms.ComboBox();
             this.btAgregarArt = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbAgrCod
@@ -115,7 +117,7 @@
             this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrCodigo.Location = new System.Drawing.Point(92, 56);
             this.txtAgrCodigo.Name = "txtAgrCodigo";
-            this.txtAgrCodigo.Size = new System.Drawing.Size(85, 20);
+            this.txtAgrCodigo.Size = new System.Drawing.Size(309, 20);
             this.txtAgrCodigo.TabIndex = 7;
             // 
             // txtAgrNombre
@@ -123,7 +125,7 @@
             this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrNombre.Location = new System.Drawing.Point(92, 89);
             this.txtAgrNombre.Name = "txtAgrNombre";
-            this.txtAgrNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtAgrNombre.Size = new System.Drawing.Size(309, 20);
             this.txtAgrNombre.TabIndex = 8;
             // 
             // txtAgrDescripcion
@@ -131,7 +133,7 @@
             this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrDescripcion.Location = new System.Drawing.Point(92, 130);
             this.txtAgrDescripcion.Name = "txtAgrDescripcion";
-            this.txtAgrDescripcion.Size = new System.Drawing.Size(181, 20);
+            this.txtAgrDescripcion.Size = new System.Drawing.Size(309, 20);
             this.txtAgrDescripcion.TabIndex = 9;
             // 
             // txtAgrImagen
@@ -139,7 +141,7 @@
             this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrImagen.Location = new System.Drawing.Point(92, 251);
             this.txtAgrImagen.Name = "txtAgrImagen";
-            this.txtAgrImagen.Size = new System.Drawing.Size(181, 20);
+            this.txtAgrImagen.Size = new System.Drawing.Size(309, 20);
             this.txtAgrImagen.TabIndex = 12;
             // 
             // txtAgrPrecio
@@ -147,7 +149,7 @@
             this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrPrecio.Location = new System.Drawing.Point(92, 288);
             this.txtAgrPrecio.Name = "txtAgrPrecio";
-            this.txtAgrPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtAgrPrecio.Size = new System.Drawing.Size(309, 20);
             this.txtAgrPrecio.TabIndex = 13;
             // 
             // lbAgrArt
@@ -166,7 +168,7 @@
             this.cbxAgrMarca.FormattingEnabled = true;
             this.cbxAgrMarca.Location = new System.Drawing.Point(92, 171);
             this.cbxAgrMarca.Name = "cbxAgrMarca";
-            this.cbxAgrMarca.Size = new System.Drawing.Size(121, 21);
+            this.cbxAgrMarca.Size = new System.Drawing.Size(309, 21);
             this.cbxAgrMarca.TabIndex = 15;
             // 
             // cbxAgrCategoria
@@ -175,13 +177,13 @@
             this.cbxAgrCategoria.FormattingEnabled = true;
             this.cbxAgrCategoria.Location = new System.Drawing.Point(92, 210);
             this.cbxAgrCategoria.Name = "cbxAgrCategoria";
-            this.cbxAgrCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cbxAgrCategoria.Size = new System.Drawing.Size(309, 21);
             this.cbxAgrCategoria.TabIndex = 16;
             // 
             // btAgregarArt
             // 
             this.btAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAgregarArt.Location = new System.Drawing.Point(138, 361);
+            this.btAgregarArt.Location = new System.Drawing.Point(362, 361);
             this.btAgregarArt.Name = "btAgregarArt";
             this.btAgregarArt.Size = new System.Drawing.Size(75, 23);
             this.btAgregarArt.TabIndex = 17;
@@ -193,7 +195,7 @@
             // 
             this.btCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btCancelar.Location = new System.Drawing.Point(231, 361);
+            this.btCancelar.Location = new System.Drawing.Point(455, 361);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 18;
@@ -201,13 +203,22 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(422, 56);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 103);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmAgregarArt
             // 
             this.AcceptButton = this.btAgregarArt;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btCancelar;
-            this.ClientSize = new System.Drawing.Size(338, 401);
+            this.ClientSize = new System.Drawing.Size(562, 401);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAgregarArt);
             this.Controls.Add(this.cbxAgrCategoria);
@@ -234,9 +245,12 @@
             this.Text = "frmAgregarArt";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAgregarArt_FormClosed);
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
 
