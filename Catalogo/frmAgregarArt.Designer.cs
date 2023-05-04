@@ -43,7 +43,7 @@
 						this.lbAgrArt = new System.Windows.Forms.Label();
 						this.cbxAgrMarca = new System.Windows.Forms.ComboBox();
 						this.cbxAgrCategoria = new System.Windows.Forms.ComboBox();
-						this.btAgregarArt = new System.Windows.Forms.Button();
+						this.btAceptar = new System.Windows.Forms.Button();
 						this.btCancelar = new System.Windows.Forms.Button();
 						this.SuspendLayout();
 						// 
@@ -122,7 +122,7 @@
 						this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.txtAgrCodigo.Location = new System.Drawing.Point(123, 69);
-						this.txtAgrCodigo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.txtAgrCodigo.Margin = new System.Windows.Forms.Padding(4);
 						this.txtAgrCodigo.Name = "txtAgrCodigo";
 						this.txtAgrCodigo.Size = new System.Drawing.Size(112, 22);
 						this.txtAgrCodigo.TabIndex = 7;
@@ -132,7 +132,7 @@
 						this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.txtAgrNombre.Location = new System.Drawing.Point(123, 110);
-						this.txtAgrNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.txtAgrNombre.Margin = new System.Windows.Forms.Padding(4);
 						this.txtAgrNombre.Name = "txtAgrNombre";
 						this.txtAgrNombre.Size = new System.Drawing.Size(199, 22);
 						this.txtAgrNombre.TabIndex = 8;
@@ -142,7 +142,7 @@
 						this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.txtAgrDescripcion.Location = new System.Drawing.Point(123, 160);
-						this.txtAgrDescripcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.txtAgrDescripcion.Margin = new System.Windows.Forms.Padding(4);
 						this.txtAgrDescripcion.Name = "txtAgrDescripcion";
 						this.txtAgrDescripcion.Size = new System.Drawing.Size(240, 22);
 						this.txtAgrDescripcion.TabIndex = 9;
@@ -152,7 +152,7 @@
 						this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.txtAgrImagen.Location = new System.Drawing.Point(123, 309);
-						this.txtAgrImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.txtAgrImagen.Margin = new System.Windows.Forms.Padding(4);
 						this.txtAgrImagen.Name = "txtAgrImagen";
 						this.txtAgrImagen.Size = new System.Drawing.Size(240, 22);
 						this.txtAgrImagen.TabIndex = 12;
@@ -162,7 +162,7 @@
 						this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.txtAgrPrecio.Location = new System.Drawing.Point(123, 354);
-						this.txtAgrPrecio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.txtAgrPrecio.Margin = new System.Windows.Forms.Padding(4);
 						this.txtAgrPrecio.Name = "txtAgrPrecio";
 						this.txtAgrPrecio.Size = new System.Drawing.Size(132, 22);
 						this.txtAgrPrecio.TabIndex = 13;
@@ -184,7 +184,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.cbxAgrMarca.FormattingEnabled = true;
 						this.cbxAgrMarca.Location = new System.Drawing.Point(123, 210);
-						this.cbxAgrMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.cbxAgrMarca.Margin = new System.Windows.Forms.Padding(4);
 						this.cbxAgrMarca.Name = "cbxAgrMarca";
 						this.cbxAgrMarca.Size = new System.Drawing.Size(160, 24);
 						this.cbxAgrMarca.TabIndex = 15;
@@ -195,29 +195,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 						this.cbxAgrCategoria.FormattingEnabled = true;
 						this.cbxAgrCategoria.Location = new System.Drawing.Point(123, 258);
-						this.cbxAgrCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.cbxAgrCategoria.Margin = new System.Windows.Forms.Padding(4);
 						this.cbxAgrCategoria.Name = "cbxAgrCategoria";
 						this.cbxAgrCategoria.Size = new System.Drawing.Size(160, 24);
 						this.cbxAgrCategoria.TabIndex = 16;
 						// 
-						// btAgregarArt
+						// btAceptar
 						// 
-						this.btAgregarArt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-						this.btAgregarArt.Location = new System.Drawing.Point(184, 444);
-						this.btAgregarArt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-						this.btAgregarArt.Name = "btAgregarArt";
-						this.btAgregarArt.Size = new System.Drawing.Size(100, 28);
-						this.btAgregarArt.TabIndex = 17;
-						this.btAgregarArt.Text = "Agregar";
-						this.btAgregarArt.UseVisualStyleBackColor = true;
-						this.btAgregarArt.Click += new System.EventHandler(this.btAgregarArt_Click);
+						this.btAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+						this.btAceptar.Location = new System.Drawing.Point(184, 444);
+						this.btAceptar.Margin = new System.Windows.Forms.Padding(4);
+						this.btAceptar.Name = "btAceptar";
+						this.btAceptar.Size = new System.Drawing.Size(100, 28);
+						this.btAceptar.TabIndex = 17;
+						this.btAceptar.Text = "Aceptar";
+						this.btAceptar.UseVisualStyleBackColor = true;
+						this.btAceptar.Click += new System.EventHandler(this.btAgregarArt_Click);
 						// 
 						// btCancelar
 						// 
 						this.btCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 						this.btCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
 						this.btCancelar.Location = new System.Drawing.Point(308, 444);
-						this.btCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.btCancelar.Margin = new System.Windows.Forms.Padding(4);
 						this.btCancelar.Name = "btCancelar";
 						this.btCancelar.Size = new System.Drawing.Size(100, 28);
 						this.btCancelar.TabIndex = 18;
@@ -227,13 +227,13 @@
 						// 
 						// frmAgregarArt
 						// 
-						this.AcceptButton = this.btAgregarArt;
+						this.AcceptButton = this.btAceptar;
 						this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 						this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 						this.CancelButton = this.btCancelar;
 						this.ClientSize = new System.Drawing.Size(451, 484);
 						this.Controls.Add(this.btCancelar);
-						this.Controls.Add(this.btAgregarArt);
+						this.Controls.Add(this.btAceptar);
 						this.Controls.Add(this.cbxAgrCategoria);
 						this.Controls.Add(this.cbxAgrMarca);
 						this.Controls.Add(this.lbAgrArt);
@@ -249,7 +249,7 @@
 						this.Controls.Add(this.lbAgrDescripcion);
 						this.Controls.Add(this.lbAgrNom);
 						this.Controls.Add(this.lbAgrCod);
-						this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+						this.Margin = new System.Windows.Forms.Padding(4);
 						this.MaximizeBox = false;
 						this.MaximumSize = new System.Drawing.Size(999, 531);
 						this.MinimizeBox = false;
@@ -280,7 +280,7 @@
         private System.Windows.Forms.Label lbAgrArt;
         private System.Windows.Forms.ComboBox cbxAgrMarca;
         private System.Windows.Forms.ComboBox cbxAgrCategoria;
-        private System.Windows.Forms.Button btAgregarArt;
+        private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
     }
 }

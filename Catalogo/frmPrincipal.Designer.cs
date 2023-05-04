@@ -46,7 +46,7 @@
 						this.dataGridView1.Name = "dataGridView1";
 						this.dataGridView1.RowHeadersWidth = 51;
 						this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-						this.dataGridView1.Size = new System.Drawing.Size(955, 256);
+						this.dataGridView1.Size = new System.Drawing.Size(845, 256);
 						this.dataGridView1.TabIndex = 0;
 						// 
 						// btAgregar
@@ -73,7 +73,7 @@
 						// 
 						// pbxArticulo
 						// 
-						this.pbxArticulo.Location = new System.Drawing.Point(688, 276);
+						this.pbxArticulo.Location = new System.Drawing.Point(578, 276);
 						this.pbxArticulo.Name = "pbxArticulo";
 						this.pbxArticulo.Size = new System.Drawing.Size(283, 239);
 						this.pbxArticulo.TabIndex = 3;
@@ -83,8 +83,8 @@
 						// 
 						this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 						this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-						this.BackColor = System.Drawing.SystemColors.Control;
-						this.ClientSize = new System.Drawing.Size(1067, 554);
+						this.BackColor = System.Drawing.SystemColors.ControlLight;
+						this.ClientSize = new System.Drawing.Size(874, 555);
 						this.Controls.Add(this.pbxArticulo);
 						this.Controls.Add(this.btnModificar);
 						this.Controls.Add(this.btAgregar);
@@ -92,6 +92,8 @@
 						this.Location = new System.Drawing.Point(15, 15);
 						this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
 						this.Name = "frmPrincipal";
+						this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+						this.Text = "Catálogo PRG 3";
 						this.Load += new System.EventHandler(this.Form1_Load);
 						((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 						((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).EndInit();

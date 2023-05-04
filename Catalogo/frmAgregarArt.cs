@@ -51,9 +51,8 @@ namespace Catalogo
 								articulo.Codigo = txtAgrCodigo.Text;
 								articulo.Nombre = txtAgrNombre.Text;
 								articulo.Descripcion = txtAgrDescripcion.Text;
-								//TODO: VER ACA QUE ONDA CON LOS COMBOBOX, modifica, pero con cualquier valor en los comboboxes
-								articulo.IdMarca = (int)cbxAgrMarca.SelectedIndex;
-								articulo.IdCategoria = (int)cbxAgrCategoria.SelectedIndex;
+								articulo.IdMarca = (int)cbxAgrMarca.SelectedValue;
+								articulo.IdCategoria = (int)cbxAgrCategoria.SelectedValue;
 								//Imagen aux = new Imagen();
 								//aux.ImagenUrl = (string)lector["UrlImagen"];
 								articulo.Precio = decimal.Parse(txtAgrPrecio.Text);
