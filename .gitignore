@@ -7,4 +7,4 @@ riderModule.iml
 .gitignore
 .vs
 .vscode
-./ConexionDB/DB.cs
+./ConexionDB
