@@ -34,7 +34,7 @@ namespace Catalogo
                 articulo.Codigo = txtAgrCodigo.Text;
                 articulo.Nombre= txtAgrNombre.Text;
                 articulo.Descripcion= txtAgrDescripcion.Text;
-                articulo.IdMarca= cbxAgrMarca.SelectedIndex;
+                articulo.IdMarca= (int)cbxAgrMarca.SelectedIndex;
                 articulo.IdCategoria=  cbxAgrCategoria.SelectedIndex;
                 //Imagen aux = new Imagen();
                 //aux.ImagenUrl = (string)lector["UrlImagen"];
@@ -46,6 +46,21 @@ namespace Catalogo
 
                 
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void frmAgregarArt_Load(object sender, EventArgs e)
+        {
+            NegocioMarca negocioMarca = new NegocioMarca();
+            try
+            {
+                cbxAgrMarca.DataSource = negocioMarca.listar();
+                cbxAgrMarca.ValueMember = "Id";
             }
             catch (Exception ex)
             {

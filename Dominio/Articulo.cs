@@ -4,16 +4,7 @@ namespace Dominio
 {
     public class Articulo
     {
-        /*
-     [Id] [int] IDENTITY(1,1) NOT NULL,
-	[Codigo] [varchar](50) NULL,
-	[Nombre] [varchar](50) NULL,
-	[Descripcion] [varchar](150) NULL,
-	[IdMarca] [int] NULL,
-	[IdCategoria] [int] NULL,
-	[Precio] [money] NULL,
- CONSTRAINT [PK_ARTICULOS]
-         */
+    
         
         public int Id { get; set; }
         public String Codigo { get; set; }
