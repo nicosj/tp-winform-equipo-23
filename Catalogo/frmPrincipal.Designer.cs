@@ -35,6 +35,9 @@
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lbVistaPrevia = new System.Windows.Forms.Label();
+            this.btFiltro = new System.Windows.Forms.Button();
+            this.lbFiltro = new System.Windows.Forms.Label();
+            this.txtFiltro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +46,7 @@
             // 
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 11);
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 74);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.RowHeadersWidth = 51;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -72,10 +75,10 @@
             // 
             // pbxArticulo
             // 
-            this.pbxArticulo.Location = new System.Drawing.Point(515, 323);
+            this.pbxArticulo.Location = new System.Drawing.Point(420, 388);
             this.pbxArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(130, 115);
+            this.pbxArticulo.Size = new System.Drawing.Size(61, 50);
             this.pbxArticulo.TabIndex = 3;
             this.pbxArticulo.TabStop = false;
             // 
@@ -94,11 +97,37 @@
             // lbVistaPrevia
             // 
             this.lbVistaPrevia.AutoSize = true;
-            this.lbVistaPrevia.Location = new System.Drawing.Point(498, 305);
+            this.lbVistaPrevia.Location = new System.Drawing.Point(349, 407);
             this.lbVistaPrevia.Name = "lbVistaPrevia";
             this.lbVistaPrevia.Size = new System.Drawing.Size(66, 13);
             this.lbVistaPrevia.TabIndex = 5;
             this.lbVistaPrevia.Text = "Vista Previa:";
+            // 
+            // btFiltro
+            // 
+            this.btFiltro.Location = new System.Drawing.Point(153, 41);
+            this.btFiltro.Name = "btFiltro";
+            this.btFiltro.Size = new System.Drawing.Size(44, 23);
+            this.btFiltro.TabIndex = 6;
+            this.btFiltro.Text = "Filtrar";
+            this.btFiltro.UseVisualStyleBackColor = true;
+            this.btFiltro.Click += new System.EventHandler(this.btFiltro_Click);
+            // 
+            // lbFiltro
+            // 
+            this.lbFiltro.AutoSize = true;
+            this.lbFiltro.Location = new System.Drawing.Point(9, 46);
+            this.lbFiltro.Name = "lbFiltro";
+            this.lbFiltro.Size = new System.Drawing.Size(32, 13);
+            this.lbFiltro.TabIndex = 7;
+            this.lbFiltro.Text = "Filtro:";
+            // 
+            // txtFiltro
+            // 
+            this.txtFiltro.Location = new System.Drawing.Point(47, 43);
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(100, 20);
+            this.txtFiltro.TabIndex = 8;
             // 
             // frmPrincipal
             // 
@@ -106,6 +135,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(656, 451);
+            this.Controls.Add(this.txtFiltro);
+            this.Controls.Add(this.lbFiltro);
+            this.Controls.Add(this.btFiltro);
             this.Controls.Add(this.lbVistaPrevia);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.pbxArticulo);
@@ -134,5 +166,8 @@
 				private System.Windows.Forms.PictureBox pbxArticulo;
 		private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lbVistaPrevia;
+        private System.Windows.Forms.Button btFiltro;
+        private System.Windows.Forms.Label lbFiltro;
+        private System.Windows.Forms.TextBox txtFiltro;
     }
 }

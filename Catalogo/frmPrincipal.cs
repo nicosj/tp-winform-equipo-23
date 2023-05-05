@@ -16,6 +16,7 @@ namespace Catalogo
 {
 	public partial class frmPrincipal : Form
 	{
+		private List<Articulo> listaArticulo;
 		public frmPrincipal()
 		{
 			InitializeComponent();
@@ -28,6 +29,7 @@ namespace Catalogo
 		private void cargar()
 		{
 			NegocioArticulo negocio = new NegocioArticulo();
+			listaArticulo = negocio.listar();
 			dgvArticulos.DataSource = negocio.listar();
 			
 		}
@@ -92,6 +94,13 @@ namespace Catalogo
 			}
 		}
 
-       
+        private void btFiltro_Click(object sender, EventArgs e)
+        {
+			List<Articulo> listafiltrada;
+
+			listafiltrada = listaArticulo.FindAll(x => x.Nombre.ToLower().Contains(txtFiltro.Text.ToLower())|| x.Codigo.ToLower().Contains(txtFiltro.Text.ToLower()) || x.Descripcion.ToLower().Contains(txtFiltro.Text.ToLower()));
+			dgvArticulos.DataSource = null;
+			dgvArticulos.DataSource = listafiltrada;
+        }
     }
 }
