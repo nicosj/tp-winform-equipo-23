@@ -116,6 +116,7 @@
             this.btnModCategoria.TabIndex = 8;
             this.btnModCategoria.Text = "Modificar";
             this.btnModCategoria.UseVisualStyleBackColor = false;
+            this.btnModCategoria.Click += new System.EventHandler(this.btnModCategoria_Click);
             // 
             // btnDelCategoria
             // 

@@ -68,6 +68,8 @@ namespace Catalogo
 				}
 			}
 
+       
+
         private void btnAddCategoria_Click(object sender, EventArgs e)
         {
             frmAddCategoria categoria = new frmAddCategoria();
@@ -101,6 +103,15 @@ namespace Catalogo
         private void btnDelCategoria_Click_1(object sender, EventArgs e)
         {
 			eliminarcategoria();
+        }
+
+        private void btnModCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionado;
+            seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+            frmAddCategoria modificar = new frmAddCategoria(seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }

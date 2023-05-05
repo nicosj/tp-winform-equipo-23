@@ -169,6 +169,7 @@
             // 
             this.cbxAgrMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAgrMarca.FormattingEnabled = true;
             this.cbxAgrMarca.Location = new System.Drawing.Point(92, 171);
             this.cbxAgrMarca.Name = "cbxAgrMarca";
@@ -179,6 +180,7 @@
             // 
             this.cbxAgrCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAgrCategoria.FormattingEnabled = true;
             this.cbxAgrCategoria.Location = new System.Drawing.Point(92, 210);
             this.cbxAgrCategoria.Name = "cbxAgrCategoria";

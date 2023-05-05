@@ -32,11 +32,12 @@
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.txtAddID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAddCategoria
             // 
-            this.txtAddCategoria.Location = new System.Drawing.Point(80, 32);
+            this.txtAddCategoria.Location = new System.Drawing.Point(78, 49);
             this.txtAddCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddCategoria.Name = "txtAddCategoria";
             this.txtAddCategoria.Size = new System.Drawing.Size(152, 20);
@@ -45,7 +46,7 @@
             // lbDescripcion
             // 
             this.lbDescripcion.AutoSize = true;
-            this.lbDescripcion.Location = new System.Drawing.Point(8, 35);
+            this.lbDescripcion.Location = new System.Drawing.Point(8, 52);
             this.lbDescripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDescripcion.Name = "lbDescripcion";
             this.lbDescripcion.Size = new System.Drawing.Size(63, 13);
@@ -76,6 +77,14 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // txtAddID
+            // 
+            this.txtAddID.Location = new System.Drawing.Point(78, 24);
+            this.txtAddID.Name = "txtAddID";
+            this.txtAddID.ReadOnly = true;
+            this.txtAddID.Size = new System.Drawing.Size(39, 20);
+            this.txtAddID.TabIndex = 6;
+            // 
             // frmAddCategoria
             // 
             this.AcceptButton = this.btAceptar;
@@ -85,6 +94,7 @@
             this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(248, 135);
             this.ControlBox = false;
+            this.Controls.Add(this.txtAddID);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.lbDescripcion);
@@ -95,6 +105,7 @@
             this.Name = "frmAddCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Categoria";
+            this.Load += new System.EventHandler(this.frmAddCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,5 +117,6 @@
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
+        private System.Windows.Forms.TextBox txtAddID;
     }
 }
