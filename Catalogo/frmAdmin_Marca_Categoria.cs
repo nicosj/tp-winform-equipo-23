@@ -44,9 +44,9 @@ namespace Catalogo
 
 		private void btnDelMarca_Click(object sender, EventArgs e)
 		{
-			eliminar();
+			eliminarmarca();
 		}
-			private void eliminar()
+			private void eliminarmarca()
 			{
 				NegocioMarca negocio = new NegocioMarca();
 				Marca seleccionado;
@@ -67,5 +67,40 @@ namespace Catalogo
 					MessageBox.Show(ex.ToString());
 				}
 			}
-	}
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            frmAddCategoria categoria = new frmAddCategoria();
+            categoria.ShowDialog();
+            cargar();
+        }
+
+       
+        private void eliminarcategoria()
+        {
+            NegocioCategoria categoria = new NegocioCategoria();
+            Categoria seleccionado;
+
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("Seguro que desea eliminar la Categoria?", "Esta acción es irreversible", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    categoria.eliminar(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnDelCategoria_Click_1(object sender, EventArgs e)
+        {
+			eliminarcategoria();
+        }
+    }
 }

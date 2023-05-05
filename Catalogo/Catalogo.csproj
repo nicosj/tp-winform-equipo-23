@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCategoria.Designer.cs">
+      <DependentUpon>frmAddCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddMarca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddCategoria.resx">
+      <DependentUpon>frmAddCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddMarca.resx">
       <DependentUpon>frmAddMarca.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,6 +1,6 @@
 ﻿namespace Catalogo
 {
-	partial class frmAddMarca
+	partial class frmEdicionMarcaCategoria
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -45,7 +45,7 @@
             // lblAddMarca_Descripcion
             // 
             this.lblAddMarca_Descripcion.AutoSize = true;
-            this.lblAddMarca_Descripcion.Location = new System.Drawing.Point(8, 35);
+            this.lblAddMarca_Descripcion.Location = new System.Drawing.Point(16, 37);
             this.lblAddMarca_Descripcion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAddMarca_Descripcion.Name = "lblAddMarca_Descripcion";
             this.lblAddMarca_Descripcion.Size = new System.Drawing.Size(63, 13);
@@ -75,7 +75,7 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // frmAddMarca
+            // frmEdicionMarcaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -86,9 +86,9 @@
             this.Controls.Add(this.lblAddMarca_Descripcion);
             this.Controls.Add(this.txtAddDescripcion);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "frmAddMarca";
+            this.Name = "frmEdicionMarcaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Marca";
+            this.Text = "Agregar/Editar";
             this.ResumeLayout(false);
             this.PerformLayout();
 
