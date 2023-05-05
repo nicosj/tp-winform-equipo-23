@@ -10,9 +10,10 @@ using System.Windows.Forms;
 using Dominio;
 using ConexionDB;
 using negocio;
-
+//push test
 namespace Catalogo
 {
+
     public partial class frmAgregarArt : Form
     {
         public frmAgregarArt()
@@ -45,18 +46,43 @@ namespace Catalogo
                 /*dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('"+articulo.Codigo+"','"+articulo.Nombre+"','"+articulo.Descripcion+"',"+articulo.IdMarca+","+articulo.IdCategoria+","+articulo.Precio+")");
                 dB.ejecutarLectura();*/
                 NegocioArticulo negocioArticulo = new NegocioArticulo();
-               
-                //realiza la consulta en la logica de negocio y retorna el bool si fue exitoso
+                
+                /*if (articulo.Id != 0)
+                {//MODIFICAR
+	                //realiza la consulta en la logica de negocio y retorna el bool si fue exitoso
+	                
+
+
+
+	                
+
+                }
+                else
+                {//AGREGAR
+	                if(negocioArticulo.guardar(articulo))
+	                {
+		                MessageBox.Show("Articulo agregado con exito");
+		                //prue
+                    
+	                }
+	                else
+	                {
+		                MessageBox.Show("Error BD");
+	                }
+	                
+                }*/
                 if(negocioArticulo.guardar(articulo))
                 {
-                    MessageBox.Show("Articulo agregado con exito");
-                    //prue
+	                MessageBox.Show("Articulo modificado con exito");
+	                //prue
                     
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar articulo");
+	                MessageBox.Show("Error BD");
                 }
+                
+                
                 
 
                 
@@ -87,6 +113,34 @@ namespace Catalogo
 
                 MessageBox.Show(ex.ToString());
             }
+            /*
+             * NegocioMarca negocioMarca = new NegocioMarca();
+						NegocioCategoria negocioCategoria = new NegocioCategoria();
+						try
+						{
+								cbxAgrMarca.DataSource = negocioMarca.listar();
+								cbxAgrMarca.ValueMember = "Id";
+								cbxAgrMarca.DisplayMember	= "Descripcion";
+								cbxAgrCategoria.DataSource = negocioCategoria.listar();
+								cbxAgrCategoria.ValueMember = "Id";
+								cbxAgrCategoria.DisplayMember	= "Descripcion";
+
+								if(articulo != null)
+								{
+										txtAgrCodigo.Text = articulo.Codigo;
+										txtAgrNombre.Text = articulo.Nombre;
+										txtAgrDescripcion.Text = articulo.Descripcion;
+										cbxAgrMarca.SelectedValue = articulo.IdMarca;
+										cbxAgrCategoria.SelectedValue = articulo.IdCategoria;												
+										txtAgrPrecio.Text = articulo.Precio.ToString();
+								}
+						}
+						catch (Exception ex)
+						{
+
+								MessageBox.Show(ex.ToString());
+						}
+             */
         }
 
 
@@ -98,4 +152,5 @@ namespace Catalogo
             
         }
     }
+
 }

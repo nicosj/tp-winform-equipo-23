@@ -13,6 +13,7 @@ namespace negocio
             DB db = new DB();
             try
             {
+                if(nuevo.Id!=0){
                 db.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
                 db.comando.Parameters.Clear();
                 db.comando.Parameters.AddWithValue("@Codigo", nuevo.Codigo);
@@ -21,7 +22,13 @@ namespace negocio
                 db.comando.Parameters.AddWithValue("@IdMarca", nuevo.IdMarca);
                 db.comando.Parameters.AddWithValue("@IdCategoria", nuevo.IdCategoria);
                 db.comando.Parameters.AddWithValue("@Precio", nuevo.Precio);
+                }
+                else
+                { 
+                    db.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('" + nuevo.Codigo + "','" + nuevo.Nombre + "','" + nuevo.Descripcion + "'," + nuevo.IdMarca + "," + nuevo.IdCategoria + "," + nuevo.Precio + ")");
+                }
                 return db.ejecutarAccion();
+                
             }
             catch (System.Exception ex)
             {

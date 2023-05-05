@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btAgregar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -168,6 +169,7 @@
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -190,5 +192,7 @@
         #endregion
 
         private System.Windows.Forms.Button btAgregar;
-    }
+				private System.Windows.Forms.Button btnModificar;
+				private System.Windows.Forms.PictureBox pbxArticulo;
+		}
 }
