@@ -102,5 +102,11 @@ namespace Catalogo
 			dgvArticulos.DataSource = null;
 			dgvArticulos.DataSource = listafiltrada;
         }
-    }
+
+		private void btnAdministrarMyC_Click(object sender, EventArgs e)
+		{
+			frmAdmin_Marca_Categoria admin = new frmAdmin_Marca_Categoria();
+			admin.ShowDialog();
+		}
+	}
 }
