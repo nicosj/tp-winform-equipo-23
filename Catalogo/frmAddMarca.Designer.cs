@@ -28,41 +28,23 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.txtAddMarca = new System.Windows.Forms.TextBox();
 			this.txtAddDescripcion = new System.Windows.Forms.TextBox();
-			this.lblAddMarca = new System.Windows.Forms.Label();
 			this.lblAddMarca_Descripcion = new System.Windows.Forms.Label();
 			this.btnAceptar = new System.Windows.Forms.Button();
 			this.btnCancelar = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// txtAddMarca
-			// 
-			this.txtAddMarca.Location = new System.Drawing.Point(106, 33);
-			this.txtAddMarca.Name = "txtAddMarca";
-			this.txtAddMarca.Size = new System.Drawing.Size(201, 22);
-			this.txtAddMarca.TabIndex = 0;
-			// 
 			// txtAddDescripcion
 			// 
-			this.txtAddDescripcion.Location = new System.Drawing.Point(106, 61);
+			this.txtAddDescripcion.Location = new System.Drawing.Point(106, 39);
 			this.txtAddDescripcion.Name = "txtAddDescripcion";
 			this.txtAddDescripcion.Size = new System.Drawing.Size(201, 22);
 			this.txtAddDescripcion.TabIndex = 1;
 			// 
-			// lblAddMarca
-			// 
-			this.lblAddMarca.AutoSize = true;
-			this.lblAddMarca.Location = new System.Drawing.Point(80, 33);
-			this.lblAddMarca.Name = "lblAddMarca";
-			this.lblAddMarca.Size = new System.Drawing.Size(20, 16);
-			this.lblAddMarca.TabIndex = 2;
-			this.lblAddMarca.Text = "ID";
-			// 
 			// lblAddMarca_Descripcion
 			// 
 			this.lblAddMarca_Descripcion.AutoSize = true;
-			this.lblAddMarca_Descripcion.Location = new System.Drawing.Point(21, 68);
+			this.lblAddMarca_Descripcion.Location = new System.Drawing.Point(21, 46);
 			this.lblAddMarca_Descripcion.Name = "lblAddMarca_Descripcion";
 			this.lblAddMarca_Descripcion.Size = new System.Drawing.Size(79, 16);
 			this.lblAddMarca_Descripcion.TabIndex = 3;
@@ -98,9 +80,7 @@
 			this.Controls.Add(this.btnCancelar);
 			this.Controls.Add(this.btnAceptar);
 			this.Controls.Add(this.lblAddMarca_Descripcion);
-			this.Controls.Add(this.lblAddMarca);
 			this.Controls.Add(this.txtAddDescripcion);
-			this.Controls.Add(this.txtAddMarca);
 			this.Name = "frmAddMarca";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Agregar Marca";
@@ -110,10 +90,7 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.TextBox txtAddMarca;
 		private System.Windows.Forms.TextBox txtAddDescripcion;
-		private System.Windows.Forms.Label lblAddMarca;
 		private System.Windows.Forms.Label lblAddMarca_Descripcion;
 		private System.Windows.Forms.Button btnAceptar;
 		private System.Windows.Forms.Button btnCancelar;
