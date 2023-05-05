@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ConexionDB;
+using Dominio;
 
 
 namespace Catalogo
@@ -24,7 +25,7 @@ namespace Catalogo
 		{
 			cargar();
 		}
-			private void cargar()
+			public void cargar()
 			{
 				NegocioMarca marca = new NegocioMarca();
 				dgvMarcas.DataSource = marca.listar();
@@ -37,7 +38,34 @@ namespace Catalogo
 		{
 			frmAddMarca marca = new frmAddMarca();
 			marca.ShowDialog();
+			cargar();
 
 		}
+
+		private void btnDelMarca_Click(object sender, EventArgs e)
+		{
+			eliminar();
+		}
+			private void eliminar()
+			{
+				NegocioMarca negocio = new NegocioMarca();
+				Marca seleccionado;
+
+				try
+				{
+					DialogResult respuesta = MessageBox.Show("Seguro que desea eliminar la Marca?", "Esta acción es irreversible", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+					if (respuesta == DialogResult.Yes)
+					{
+						seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+						negocio.eliminar(seleccionado.Id);
+						cargar();
+					}
+				}
+				catch (Exception ex)
+				{
+
+					MessageBox.Show(ex.ToString());
+				}
+			}
 	}
 }

@@ -39,6 +39,23 @@ namespace negocio
                 db.cerrarConexion();
             }
         }
+		public void eliminar(int id)
+		{
+			try
+			{
+				DB datos = new DB();
+				datos.setearConsulta("DELETE FROM MARCAS where id= @id");
+				datos.setearParametro("@id", id);
+				datos.ejecutarAccion();
+			}
+			catch (Exception ex)
+			{
 
-    }
+				throw ex;
+			}
+
+		}
+
+
+	}
 }

@@ -49,6 +49,7 @@
 			this.dgvMarcas.Name = "dgvMarcas";
 			this.dgvMarcas.RowHeadersWidth = 51;
 			this.dgvMarcas.RowTemplate.Height = 24;
+			this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvMarcas.Size = new System.Drawing.Size(352, 150);
 			this.dgvMarcas.TabIndex = 0;
 			// 
@@ -119,6 +120,7 @@
 			this.btnDelMarca.TabIndex = 12;
 			this.btnDelMarca.Text = "Eliminar";
 			this.btnDelMarca.UseVisualStyleBackColor = false;
+			this.btnDelMarca.Click += new System.EventHandler(this.btnDelMarca_Click);
 			// 
 			// btnModMarca
 			// 

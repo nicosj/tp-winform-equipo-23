@@ -41,6 +41,7 @@ namespace Catalogo
 				
 				MessageBox.Show("Marca agregada correctamente");
 				Close();
+
 				
 			}
 			catch (Exception ex)
