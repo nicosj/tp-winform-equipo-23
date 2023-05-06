@@ -57,8 +57,6 @@ namespace Catalogo
 								//aux.ImagenUrl = (string)lector["UrlImagen"];
 								articulo.Precio = decimal.Parse(txtAgrPrecio.Text);
 
-
-
 								//TODO: Pasar MODIF Y AGR esto a funciones y ponerle try y catchsss
 								if (articulo.Id != 0)
 								{//MODIFICAR

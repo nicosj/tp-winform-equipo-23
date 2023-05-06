@@ -27,6 +27,8 @@ namespace Catalogo
         {
             InitializeComponent();
             this.categoria = categoria;
+            //PARA CAMBIAR EL COLOR DE LA VENTANA CUANDO SE EJECUTA "MODIFICAR"
+            this.BackColor = Color.FromArgb(255, 255, 192);
             Text = "Modificar categoria";
         }
 
@@ -34,7 +36,7 @@ namespace Catalogo
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            Categoria categoria = new Categoria();
+            //Categoria categoria = new Categoria();
             DB dB = new DB();
             try
             {
@@ -44,16 +46,20 @@ namespace Catalogo
                 }
                 //categoria.Id = int.Parse(txtAddID.Text);
                     categoria.Descripcion = txtAddCategoria.Text;
-              // categoria.Id =txtAddID.Text;
+                // categoria.Id =txtAddID.Text
+                    int IdComparable = categoria.Id;
+              
 
 
-                if (categoria.Id != 0)
+                if (IdComparable != 0)
                 {
                     dB.setearConsulta("update Categorias set Descripcion=@Descripcion WHERE Id=@id");
                     dB.setearParametro("@Descripcion", categoria.Descripcion);
+                    dB.setearParametro("@id", categoria.Id);
                     dB.ejecutarLectura();
                     MessageBox.Show("Categoria modificada correctamente");
-                }
+					          Close();
+				}
                 else
                 {
                     dB.setearConsulta("insert into Categorias values (@Descripcion)");
