@@ -113,5 +113,14 @@ namespace Catalogo
             modificar.ShowDialog();
             cargar();
         }
-    }
+
+		private void btnModMarca_Click(object sender, EventArgs e)
+		{
+			Marca seleccionado;
+			seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+			frmAddMarca modificar = new frmAddMarca(seleccionado);
+			modificar.ShowDialog();
+			cargar();
+		}
+	}
 }
