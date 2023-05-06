@@ -15,9 +15,13 @@ namespace ConexionDB
         }
         public DB()
         {
+<<<<<<< HEAD
 
             conexion= new SqlConnection ("server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false");
 
+=======
+            conexion= new SqlConnection ("server=localhost\\LAB3SV; database=CATALOGO_P3_DB; integrated security=false; user=sa; password=0856;");
+>>>>>>> 59269065559d8f54287fd87770c4eea6ce880f7a
             comando = new SqlCommand();
             //prue
         }
