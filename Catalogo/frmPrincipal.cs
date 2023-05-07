@@ -147,7 +147,7 @@ namespace Catalogo
 					}
 				}
 				if(maxImg!=0){
-				pictureBox1.Load(listadoImagenx[contClick].ImagenUrl);
+					pictureBox1.Load(listadoImagenx[contClick].ImagenUrl);
 				}
 				else
 				{
