@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,53 +15,14 @@ using negocio;
 
 namespace Catalogo
 {
-
-    public partial class frmPrincipal : Form
-    {
-        public frmPrincipal()
-        {
-            InitializeComponent();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        cargar();
-        }
-      //FUNCION PARA RELODEAR EL FORMULARIO PRINCIPAL//
-        private void cargar()
-        {
-												NegocioArticulo negocio = new NegocioArticulo();
-												dataGridView1.DataSource = negocio.listar();
-								}
-
-        private void btAgregar_Click(object sender, EventArgs e)
-        {
-            frmAgregarArt alta = new frmAgregarArt();
-            alta.ShowDialog();
-
-            //Refresh datagridview
-            Form1_Load(sender, e);
-            
-
-        }
-
-      
-    }
-
-            cargar();
-        
-        }
-
-				private void btnModificar_Click(object sender, EventArgs e)
-				{
-      Articulo seleccionado;
-      seleccionado = (Articulo)dataGridView1.CurrentRow.DataBoundItem;
-      frmAgregarArt modificar = new frmAgregarArt(seleccionado);
-      modificar.ShowDialog();
-      cargar();
-
 	public partial class frmPrincipal : Form
 	{
 		private List<Articulo> listaArticulo;
+		private List<Imagen> listadoImagenx;
+		private int contClick = 0;
+		private int maxImg = 0;
+		private int pivot = 0;
+		private int _pictureIndex = 0;
 		public frmPrincipal()
 		{
 			InitializeComponent();
@@ -68,14 +30,19 @@ namespace Catalogo
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			cargar();
+			
 		}
 		//FUNCION PARA RELODEAR EL FORMULARIO PRINCIPAL//
 		private void cargar()
 		{
 			NegocioArticulo negocio = new NegocioArticulo();
+			
 			listaArticulo = negocio.listar();
 			dgvArticulos.DataSource = negocio.listar();
 			
+			pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+			pictureBox1.Load("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BLZJHTB27ZHUPKK3A7GXTMIEQA.jpg");
 		}
 
 
@@ -99,7 +66,6 @@ namespace Catalogo
 			frmAgregarArt alta = new frmAgregarArt();
 			alta.ShowDialog();
 			cargar();
->>>>>>> 59269065559d8f54287fd87770c4eea6ce880f7a
 
 		}
 
@@ -138,14 +104,7 @@ namespace Catalogo
 				MessageBox.Show(ex.ToString());
 			}
 		}
-<<<<<<< HEAD
 
-
-<<<<<<< HEAD
-       
-    }
-
-=======
         private void btFiltro_Click(object sender, EventArgs e)
         {
 			List<Articulo> listafiltrada;
@@ -160,6 +119,71 @@ namespace Catalogo
 			frmAdmin_Marca_Categoria admin = new frmAdmin_Marca_Categoria();
 			admin.ShowDialog();
 		}
+		private void imagenLoad(object sender, EventArgs e)
+		{
+			
+			NegocioImagen negocioImagen = new NegocioImagen();
+			List<Imagen> listadoImagen = new List<Imagen>();
+			listadoImagen = negocioImagen.listar();
+			Articulo seleccionado;
+			seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+			if (pivot == seleccionado.Id)
+			{
+				
+			}
+			else
+			{
+				maxImg = 0;
+				contClick = 0;
+				pivot = seleccionado.Id;
+				listadoImagenx = new List<Imagen>();
+				foreach (Imagen item in listadoImagen)
+				{
+					if (item.IdArticulo == seleccionado.Id)
+					{
+						listadoImagenx.Add(item);
+						maxImg++;
+					}
+				}
+				pictureBox1.Load(listadoImagenx[contClick].ImagenUrl);
+			}
+			
+		}
+		private void Next_Click(object sender, EventArgs e)
+		{
+			if (listadoImagenx.Count > 1)
+			{
+				_pictureIndex++;
+				if (_pictureIndex > listadoImagenx.Count)
+				{
+					_pictureIndex = listadoImagenx.Count;
+				}
+			}
+			else
+			{
+				_pictureIndex = 0;
+			}
+
+			pictureBox1.Load(listadoImagenx[_pictureIndex].ImagenUrl);
+		}
+		private void Previous_Click(object sender, EventArgs e)
+		{
+			if (listadoImagenx.Count > 1)
+			{
+				_pictureIndex--;
+				if (_pictureIndex < 0)
+				{
+					_pictureIndex = 0;
+				}
+				else
+				{
+					_pictureIndex = 0;
+				}
+			}
+			
+			pictureBox1.Load(listadoImagenx[_pictureIndex].ImagenUrl);
+			
+		}
 	}
->>>>>>> 69bc93ea9591ce4d21cde28e2e320b1abea7f7e5
 }
