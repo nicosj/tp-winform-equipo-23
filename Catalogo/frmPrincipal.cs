@@ -146,7 +146,13 @@ namespace Catalogo
 						maxImg++;
 					}
 				}
+				if(maxImg!=0){
 				pictureBox1.Load(listadoImagenx[contClick].ImagenUrl);
+				}
+				else
+				{
+					pictureBox1.Load("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BLZJHTB27ZHUPKK3A7GXTMIEQA.jpg");
+				}
 			}
 			
 		}
@@ -155,9 +161,9 @@ namespace Catalogo
 			if (listadoImagenx.Count > 1)
 			{
 				_pictureIndex++;
-				if (_pictureIndex > listadoImagenx.Count)
+				if (_pictureIndex > listadoImagenx.Count-1)
 				{
-					_pictureIndex = listadoImagenx.Count;
+					_pictureIndex = listadoImagenx.Count-1;
 				}
 			}
 			else
@@ -176,10 +182,12 @@ namespace Catalogo
 				{
 					_pictureIndex = 0;
 				}
-				else
-				{
-					_pictureIndex = 0;
-				}
+				
+			}
+			else
+			{
+				_pictureIndex = 0;
+				
 			}
 			
 			pictureBox1.Load(listadoImagenx[_pictureIndex].ImagenUrl);
