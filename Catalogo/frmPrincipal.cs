@@ -390,11 +390,12 @@ namespace Catalogo
         }
         base.WndProc(ref m);
     }
+        
 
     private void close_Click(object sender, EventArgs e)
     {
-	    string loco = this.pictureBox1.ImageLocation;
-	    DialogResult result = MessageBox.Show("¿Cerrar Formulario?", loco, MessageBoxButtons.YesNo);
+	    
+	    DialogResult result = MessageBox.Show("¿Cerrar Formulario?", "Catalogo V3", MessageBoxButtons.YesNo);
 	    if (result == DialogResult.Yes)
 	    {
 		    Close();
