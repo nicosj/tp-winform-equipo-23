@@ -41,6 +41,31 @@ namespace negocio
 				throw ex;
 			}
 		}
+
+		public int UltimoId()
+		{
+			try
+			{
+                DB db = new DB();
+                db.setearConsulta("SELECT TOP 1 Id FROM ARTICULOS ORDER BY Id DESC");
+                db.ejecutarLectura();
+				if (db.Lector.Read())
+				{
+					return db.Lector.GetInt32(0);
+				}
+				else
+				{
+					return 0;
+				}
+
+            }
+			catch (Exception)
+			{
+
+				throw;
+			}
+		}
+
 		public void eliminar(int id)
 		{
 			try

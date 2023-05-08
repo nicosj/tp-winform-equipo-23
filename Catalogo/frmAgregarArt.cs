@@ -51,7 +51,7 @@ namespace Catalogo
 								{
 										articulo = new Articulo();
 								}
-								articulo.Id= Int32.Parse(txtAgrId.Text);
+								//articulo.Id= Int32.Parse(txtAgrId.Text);
 								articulo.Codigo = txtAgrCodigo.Text;
 								articulo.Nombre = txtAgrNombre.Text;
 								articulo.Descripcion = txtAgrDescripcion.Text;
@@ -72,23 +72,34 @@ namespace Catalogo
 										dB.setearParametro("@idCategoria", articulo.IdCategoria);
 										dB.setearParametro("@precio", articulo.Precio);
 										dB.setearParametro("@id", articulo.Id);
-										dBImagen.setearConsulta("update IMAGENES set ImagenUrl = @urlImagen WHERE IdArticulo = @idArticulo");
+
+										dBImagen.setearConsulta("insert into IMAGENES values (@IdArticulo, @urlImagen)");
 										dBImagen.setearParametro("@urlImagen", aux.ImagenUrl);
 										dBImagen.setearParametro("@idArticulo", articulo.Id);
 										MessageBox.Show("Articulo modificado con exito");
 										dBImagen.ejecutarLectura();
+										dB.ejecutarLectura();
 
-								}
+
+                }
 								else
 								{//AGREGAR
 										
 										dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('" + articulo.Codigo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "'," + articulo.IdMarca + "," + articulo.IdCategoria + "," + articulo.Precio + ")");
-
-										MessageBox.Show("Articulo agregado con exito");
-								}
-								
 								dB.ejecutarLectura();
-						}
+								NegocioArticulo negocio = new NegocioArticulo();
+
+                                dBImagen.setearConsulta("insert into IMAGENES values (@IdArticulo, @urlImagen)");
+								dBImagen.setearParametro("@urlImagen", aux.ImagenUrl);
+								dBImagen.setearParametro("@idArticulo", negocio.UltimoId());
+								dBImagen.ejecutarLectura();
+								MessageBox.Show("Articulo agregado con exito");
+
+
+								}
+
+								//dB.ejecutarLectura();
+            }
 						catch (Exception ex)
 						{
 
