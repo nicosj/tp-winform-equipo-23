@@ -32,7 +32,6 @@
             this.lbDescripcion = new System.Windows.Forms.Label();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
-            this.txtAddID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtAddCategoria
@@ -77,14 +76,6 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
-            // txtAddID
-            // 
-            this.txtAddID.Location = new System.Drawing.Point(78, 24);
-            this.txtAddID.Name = "txtAddID";
-            this.txtAddID.ReadOnly = true;
-            this.txtAddID.Size = new System.Drawing.Size(39, 20);
-            this.txtAddID.TabIndex = 6;
-            // 
             // frmAddCategoria
             // 
             this.AcceptButton = this.btAceptar;
@@ -94,7 +85,6 @@
             this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(248, 135);
             this.ControlBox = false;
-            this.Controls.Add(this.txtAddID);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.lbDescripcion);
@@ -117,6 +107,5 @@
         private System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
-        private System.Windows.Forms.TextBox txtAddID;
     }
 }

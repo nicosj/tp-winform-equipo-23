@@ -109,10 +109,7 @@ namespace Catalogo
 
 		}
 
-		private void btnEliminar_Click(object sender, EventArgs e)
-		{
-			eliminar();
-		}
+		
 		private void eliminar()
 		{
 			NegocioArticulo negocio = new NegocioArticulo();
@@ -302,10 +299,10 @@ namespace Catalogo
 			}
 			
 		}
-		
-	
-		    //Overridden methods
-    protected override void WndProc(ref Message m)
+      
+
+        //Overridden methods
+        protected override void WndProc(ref Message m)
     {
         const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
         const int WM_SYSCOMMAND = 0x0112; 
@@ -403,5 +400,21 @@ namespace Catalogo
 	    }
 	    
     }
-	}
+
+        private void btDeleteImagen_Click(object sender, EventArgs e)
+        {
+
+
+            DialogResult result = MessageBox.Show("¿Borrar imagen?", "Imagen", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+            NegocioImagen negocioImagen = new NegocioImagen();
+            string URLimagen = pictureBox1.ImageLocation;
+			negocioImagen.eliminarImagen(URLimagen);
+            
+            }
+
+
+        }
+    }
 }
