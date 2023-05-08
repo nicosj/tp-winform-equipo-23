@@ -29,6 +29,11 @@ namespace ConexionDB
             comando.CommandType = System.Data.CommandType.Text;
             comando.CommandText = consulta;
         }
+        public void setearConsultaInt(string consulta)
+        {
+            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandText = consulta;
+        }
 
         public void ejecutarLectura()
         {
@@ -37,6 +42,21 @@ namespace ConexionDB
             {
                 conexion.Open();
                 lector = comando.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public int ejecutarLecturaInt()
+        {
+            
+            comando.Connection = conexion;
+            try
+            {
+                conexion.Open();
+                lector = comando.ExecuteReader();
+                return Int32.Parse(lector["Id"].ToString());
             }
             catch (Exception ex)
             {

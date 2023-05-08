@@ -45,6 +45,7 @@
             this.cbxAgrCategoria = new System.Windows.Forms.ComboBox();
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
+            this.txtAgrId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbAgrCod
@@ -112,8 +113,7 @@
             // 
             // txtAgrCodigo
             // 
-            this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrCodigo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrCodigo.Location = new System.Drawing.Point(92, 56);
             this.txtAgrCodigo.Name = "txtAgrCodigo";
             this.txtAgrCodigo.Size = new System.Drawing.Size(85, 20);
@@ -121,8 +121,7 @@
             // 
             // txtAgrNombre
             // 
-            this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrNombre.Location = new System.Drawing.Point(92, 89);
             this.txtAgrNombre.Name = "txtAgrNombre";
             this.txtAgrNombre.Size = new System.Drawing.Size(150, 20);
@@ -130,8 +129,7 @@
             // 
             // txtAgrDescripcion
             // 
-            this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrDescripcion.Location = new System.Drawing.Point(92, 130);
             this.txtAgrDescripcion.Name = "txtAgrDescripcion";
             this.txtAgrDescripcion.Size = new System.Drawing.Size(181, 20);
@@ -139,8 +137,7 @@
             // 
             // txtAgrImagen
             // 
-            this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrImagen.Location = new System.Drawing.Point(92, 251);
             this.txtAgrImagen.Name = "txtAgrImagen";
             this.txtAgrImagen.Size = new System.Drawing.Size(181, 20);
@@ -148,8 +145,7 @@
             // 
             // txtAgrPrecio
             // 
-            this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgrPrecio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAgrPrecio.Location = new System.Drawing.Point(92, 288);
             this.txtAgrPrecio.Name = "txtAgrPrecio";
             this.txtAgrPrecio.Size = new System.Drawing.Size(100, 20);
@@ -167,8 +163,7 @@
             // 
             // cbxAgrMarca
             // 
-            this.cbxAgrMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAgrMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAgrMarca.FormattingEnabled = true;
             this.cbxAgrMarca.Location = new System.Drawing.Point(92, 171);
@@ -178,8 +173,7 @@
             // 
             // cbxAgrCategoria
             // 
-            this.cbxAgrCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAgrCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAgrCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxAgrCategoria.FormattingEnabled = true;
             this.cbxAgrCategoria.Location = new System.Drawing.Point(92, 210);
@@ -210,6 +204,14 @@
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
+            // txtAgrId
+            // 
+            this.txtAgrId.Location = new System.Drawing.Point(3, 368);
+            this.txtAgrId.Name = "txtAgrId";
+            this.txtAgrId.Size = new System.Drawing.Size(44, 20);
+            this.txtAgrId.TabIndex = 19;
+            this.txtAgrId.Visible = false;
+            // 
             // frmAgregarArt
             // 
             this.AcceptButton = this.btAceptar;
@@ -217,6 +219,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btCancelar;
             this.ClientSize = new System.Drawing.Size(338, 400);
+            this.Controls.Add(this.txtAgrId);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.cbxAgrCategoria);
@@ -244,8 +247,9 @@
             this.Load += new System.EventHandler(this.frmAgregarArt_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
+
+        private System.Windows.Forms.TextBox txtAgrId;
 
         #endregion
 

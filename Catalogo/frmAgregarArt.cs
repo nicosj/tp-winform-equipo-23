@@ -43,19 +43,21 @@ namespace Catalogo
 				{
 						//Articulo articulo = new Articulo();
 						DB dB = new DB();
+						DB dBImagen = new DB();
 						try
 						{
 								if(articulo == null)
 								{
 										articulo = new Articulo();
 								}
+								articulo.Id= Int32.Parse(txtAgrId.Text);
 								articulo.Codigo = txtAgrCodigo.Text;
 								articulo.Nombre = txtAgrNombre.Text;
 								articulo.Descripcion = txtAgrDescripcion.Text;
 								articulo.IdMarca = (int)cbxAgrMarca.SelectedValue;
 								articulo.IdCategoria = (int)cbxAgrCategoria.SelectedValue;
-								//Imagen aux = new Imagen();
-								//aux.ImagenUrl = (string)lector["UrlImagen"];
+								Imagen aux = new Imagen();
+								aux.ImagenUrl = txtAgrImagen.Text;
 								articulo.Precio = decimal.Parse(txtAgrPrecio.Text);
 
 								//TODO: Pasar MODIF Y AGR esto a funciones y ponerle try y catchsss
@@ -69,20 +71,21 @@ namespace Catalogo
 										dB.setearParametro("@idCategoria", articulo.IdCategoria);
 										dB.setearParametro("@precio", articulo.Precio);
 										dB.setearParametro("@id", articulo.Id);
-
-										dB.ejecutarLectura();
-
-
+										dBImagen.setearConsulta("update IMAGENES set ImagenUrl = @urlImagen WHERE IdArticulo = @idArticulo");
+										dBImagen.setearParametro("@urlImagen", aux.ImagenUrl);
+										dBImagen.setearParametro("@idArticulo", articulo.Id);
 										MessageBox.Show("Articulo modificado con exito");
+										dBImagen.ejecutarLectura();
 
 								}
 								else
 								{//AGREGAR
+										
 										dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('" + articulo.Codigo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "'," + articulo.IdMarca + "," + articulo.IdCategoria + "," + articulo.Precio + ")");
-										dB.ejecutarLectura();
 										MessageBox.Show("Articulo agregado con exito");
 								}
-
+								
+								dB.ejecutarLectura();
 						}
 						catch (Exception ex)
 						{
@@ -106,6 +109,7 @@ namespace Catalogo
 
 								if(articulo != null)
 								{
+										txtAgrId.Text = articulo.Id.ToString();
 										txtAgrCodigo.Text = articulo.Codigo;
 										txtAgrNombre.Text = articulo.Nombre;
 										txtAgrDescripcion.Text = articulo.Descripcion;
