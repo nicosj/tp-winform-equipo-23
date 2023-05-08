@@ -396,7 +396,12 @@ namespace Catalogo
 
     private void close_Click(object sender, EventArgs e)
     {
-	    Close();
+	    DialogResult result = MessageBox.Show("¿Cerrar Formulario?", "Catalogo", MessageBoxButtons.YesNo);
+	    if (result == DialogResult.Yes)
+	    {
+		    Close();
+	    }
+	    
     }
 	}
 }
