@@ -188,6 +188,9 @@ namespace Catalogo
 				contClick = 0;
 				pivot = seleccionado.Id;
 				listadoImagenx = new List<Imagen>();
+
+				try
+				{
 				foreach (Imagen item in listadoImagen)
 				{
 					if (item.IdArticulo == seleccionado.Id)
@@ -204,6 +207,14 @@ namespace Catalogo
 				{
 					pictureBox1.Load("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BLZJHTB27ZHUPKK3A7GXTMIEQA.jpg");
 				}
+
+				}
+				catch (Exception)
+				{
+
+					MessageBox.Show("Problemas al cargar imagen, intente nuevamente");
+                    pictureBox1.Load("https://cloudfront-us-east-1.images.arcpublishing.com/infobae/BLZJHTB27ZHUPKK3A7GXTMIEQA.jpg");
+                }
 			}
 
 		}
@@ -222,7 +233,19 @@ namespace Catalogo
 				_pictureIndex = 0;
 			}
 
+			try
+			{
 			pictureBox1.Load(listadoImagenx[_pictureIndex].ImagenUrl);
+
+			}
+			catch (Exception)
+			{
+
+				MessageBox.Show("Articulo sin imagen disponible");
+				pictureBox1.Load("https://xmeme-fe.netlify.app/src/placeholder-xmeme.jpg");
+
+
+            }
 		}
 		private void Previous_Click(object sender, EventArgs e)
 		{
@@ -240,14 +263,22 @@ namespace Catalogo
 				_pictureIndex = 0;
 
 			}
-
+			try
+			{
 			pictureBox1.Load(listadoImagenx[_pictureIndex].ImagenUrl);
 
-		}
+			}
+			catch (Exception)
+			{
 
-		private void label2_Click(object sender, EventArgs e)
-		{
+                MessageBox.Show("Articulo sin imagen disponible");
+                pictureBox1.Load("https://xmeme-fe.netlify.app/src/placeholder-xmeme.jpg");
 
-		}
+
+            }
+
+        }
+
+
 	}
 }
