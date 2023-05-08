@@ -392,7 +392,11 @@ namespace Catalogo
                 this.Size = formSize;
         }
         base.WndProc(ref m);
-    }  
-    
+    }
+
+    private void close_Click(object sender, EventArgs e)
+    {
+	    Close();
+    }
 	}
 }

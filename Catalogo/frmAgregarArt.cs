@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -82,6 +83,7 @@ namespace Catalogo
 								{//AGREGAR
 										
 										dB.setearConsulta("INSERT into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio) values ('" + articulo.Codigo + "','" + articulo.Nombre + "','" + articulo.Descripcion + "'," + articulo.IdMarca + "," + articulo.IdCategoria + "," + articulo.Precio + ")");
+
 										MessageBox.Show("Articulo agregado con exito");
 								}
 								
