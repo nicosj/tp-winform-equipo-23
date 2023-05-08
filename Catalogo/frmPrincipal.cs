@@ -396,7 +396,8 @@ namespace Catalogo
 
     private void close_Click(object sender, EventArgs e)
     {
-	    DialogResult result = MessageBox.Show("¿Cerrar Formulario?", "Catalogo", MessageBoxButtons.YesNo);
+	    string loco = this.pictureBox1.ImageLocation;
+	    DialogResult result = MessageBox.Show("¿Cerrar Formulario?", loco, MessageBoxButtons.YesNo);
 	    if (result == DialogResult.Yes)
 	    {
 		    Close();
