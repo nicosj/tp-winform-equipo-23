@@ -86,13 +86,13 @@ namespace Catalogo
 			NegocioCategoria negociocategoria = new NegocioCategoria();
 			try
 			{
-				txtAddID.Text = "Id";
+			
 				txtAddCategoria.Text = "Descripcion";
 
 				if (categoria != null)
 				{
 					txtAddCategoria.Text = categoria.Descripcion;
-					txtAddID.Text = categoria.Id.ToString();
+					
 				}
 			}
 			catch (Exception ex)
@@ -100,5 +100,7 @@ namespace Catalogo
 				MessageBox.Show(ex.ToString());
 			}
 		}
-	}
+
+
+    }
 }

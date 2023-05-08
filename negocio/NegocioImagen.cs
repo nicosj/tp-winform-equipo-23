@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using ConexionDB;
 using Dominio;
@@ -32,5 +33,24 @@ namespace negocio
                 throw ex;
             }
         }
+    public void eliminarImagen(string imagen)
+    {
+        try
+        {
+            DB datos = new DB();
+            datos.setearConsulta("DELETE FROM IMAGENES where ImagenURL= @URLimagen");
+            datos.setearParametro("@URLimagen", imagen);
+            datos.ejecutarAccion();
+        }
+        catch (Exception ex)
+        {
+
+            throw ex;
+        }
+
     }
+    }
+
+
+
 }
