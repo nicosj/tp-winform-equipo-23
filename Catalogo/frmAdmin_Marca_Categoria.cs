@@ -59,6 +59,7 @@ namespace Catalogo
 						seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
 						negocio.eliminar(seleccionado.Id);
 						cargar();
+						
 					}
 				}
 				catch (Exception ex)

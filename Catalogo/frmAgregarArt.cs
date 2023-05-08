@@ -38,6 +38,7 @@ namespace Catalogo
 				private void btCancelar_Click(object sender, EventArgs e)
 				{
 						Close();
+						
 				}
 
 				private void btAceptarArt_Click(object sender, EventArgs e)
@@ -79,9 +80,9 @@ namespace Catalogo
 										MessageBox.Show("Articulo modificado con exito");
 										dBImagen.ejecutarLectura();
 										dB.ejecutarLectura();
+										
 
-
-                }
+								}
 								else
 								{//AGREGAR
 										
@@ -94,12 +95,11 @@ namespace Catalogo
 								dBImagen.setearParametro("@idArticulo", negocio.UltimoId());
 								dBImagen.ejecutarLectura();
 								MessageBox.Show("Articulo agregado con exito");
-
-
 								}
-
-								//dB.ejecutarLectura();
-            }
+								dB.cerrarConexion();
+								dBImagen.cerrarConexion();
+								
+						}
 						catch (Exception ex)
 						{
 

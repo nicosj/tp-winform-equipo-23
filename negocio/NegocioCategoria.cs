@@ -28,6 +28,7 @@ namespace negocio
 
                     categorias.Add(aux);
                 }
+                db.cerrarConexion();
                 return categorias;
             }
             catch (System.Exception ex)

@@ -17,8 +17,13 @@ namespace ConexionDB
         {
 
 
+
             conexion= new SqlConnection ("server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false");
             //conexion= new SqlConnection ("server=localhost\\lab3sv;database=CATALOGO_P3_DB;uid=sa;pwd=0856;encrypt=false"); 
+
+            //conexion= new SqlConnection ("server=127.0.0.1;database=CATALOGO_P3_DB;uid=sa;pwd=Nicosj999@;encrypt=false");
+//            conexion= new SqlConnection ("server=localhost\\LABO3; database=CATALOGO_P3_DB; integrated security = false; user=sa; password=123xx;"); 
+
 
 			comando = new SqlCommand();
 

@@ -57,6 +57,7 @@ namespace Catalogo
 					dB.setearParametro("@id", marca.Id);
 					dB.ejecutarLectura();
 					MessageBox.Show("Marca modificada correctamente");
+					dB.cerrarConexion();
 					Close();
 				}
 				else
@@ -67,7 +68,7 @@ namespace Catalogo
 					//dB.setearParametro("@Id", marca.Id); no se usa porque IDENTITY
 					dB.setearParametro("@Descripcion", marca.Descripcion);
 					dB.ejecutarLectura();
-
+					dB.cerrarConexion();
 					MessageBox.Show("Marca agregada correctamente");
 					Close();
 				}

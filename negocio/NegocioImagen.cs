@@ -24,7 +24,9 @@ namespace negocio
                     aux.IdArticulo = (int)db.Lector["IdArticulo"];
                     aux.ImagenUrl = db.Lector.GetString(2);
                     imagen.Add(aux);
+                    
                 }
+                db.cerrarConexion();
                 return imagen;
 
             }
@@ -41,6 +43,7 @@ namespace negocio
             datos.setearConsulta("DELETE FROM IMAGENES where ImagenURL= @URLimagen");
             datos.setearParametro("@URLimagen", imagen);
             datos.ejecutarAccion();
+            datos.cerrarConexion();
         }
         catch (Exception ex)
         {

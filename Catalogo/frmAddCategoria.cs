@@ -58,7 +58,9 @@ namespace Catalogo
 					dB.setearParametro("@id", categoria.Id);
 					dB.ejecutarLectura();
 					MessageBox.Show("Categoria modificada correctamente");
+					dB.cerrarConexion();
 					Close();
+					
 				}
 				else
 				{
@@ -66,6 +68,7 @@ namespace Catalogo
 					dB.setearParametro("@Descripcion", categoria.Descripcion);
 					dB.ejecutarLectura();
 					MessageBox.Show("Categoria agregada correctamente");
+					dB.cerrarConexion();
 					Close();
 				}
 			}

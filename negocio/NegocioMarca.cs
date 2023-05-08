@@ -28,6 +28,7 @@ namespace negocio
                     
                     marcas.Add(aux);
                 }
+                db.cerrarConexion();
                 return marcas;
             }
             catch (System.Exception ex)
@@ -47,6 +48,7 @@ namespace negocio
 				datos.setearConsulta("DELETE FROM MARCAS where id= @id");
 				datos.setearParametro("@id", id);
 				datos.ejecutarAccion();
+				datos.cerrarConexion();
 			}
 			catch (Exception ex)
 			{
