@@ -32,8 +32,9 @@ namespace negocio
 					aux.IdCategoria = (int)db.Lector["IdCategoria"];
 					aux.Precio = (decimal)db.Lector["Precio"];
 					articulos.Add(aux);
-					db.cerrarConexion();
+					
 				}
+				db.cerrarConexion();
 				return articulos;
 
 			}
